@@ -1,0 +1,4 @@
+db: root:123123@tcp(127.0.0.1:3306)/leaf_segment?charset=utf8&parseTime=True&loc=Local
+port: :9091
+readtimeout: 60
+writetimeout: 60

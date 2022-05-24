@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package proto; //package name
+option go_package = "../proto";
+
+service Leaf {
+    rpc GetLeafID(GetLeafReq) returns (GetLeafResp) {}
+    rpc CreateLeaf(CreateLeafReq) returns (CreateLeafResq) {}
+}
+
+message CreateLeafReq {
+    string name = 1;
+    string desc = 2;
+    uint64 max_id = 3;
+    uint64 step = 4;
+}
+
+message CreateLeafResq {
+    string message = 1;
+}
+
+message GetLeafReq {
+    string name = 1;
+}
+
+message GetLeafResp {
+    string message = 1;
+}
